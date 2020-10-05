@@ -12,7 +12,7 @@ except Exception as e:
     print(e)
     sys.exit(1)
 
-ADDON = "quietude"
+ADDON = "minibee"
 
 
 def parse_cli():
@@ -25,7 +25,7 @@ def parse_cli():
     parser.add_argument('--test', type=int, default=0, help="Runs the test corresponding to the provided number and exits. No tests are run for a value of zero (default).")
     parser.add_argument('--install', action='store_true', help="Installs the addon (zips it and imports it from within Blender). No effect is the addon is already installed, unless called with --override.")
     parser.add_argument('--override', action='store_true', help='Overrides existing addon, if one has already been installed.')
-    parser.add_argument('--bversion', type=str, default='2.82', help="Blender version.")
+    parser.add_argument('--bversion', type=str, default='2.90.0', help="Blender version.")
     args = parser.parse_args(argv)
     return args.test, args.install, args.override, args.bversion
 

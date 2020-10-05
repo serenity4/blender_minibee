@@ -1,2 +1,2 @@
 import bpy
-bpy.ops.quietude.add_qcollection_modifier()
+bpy.ops.minibee.add_qcollection_modifier()

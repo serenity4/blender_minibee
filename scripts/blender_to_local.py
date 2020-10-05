@@ -1,10 +1,10 @@
 from pathlib import Path
 import shutil
 
-ADDON = 'quietude'
+ADDON = 'minibee'
 
 def main():
-    addon_blender_path = Path(f"./external/blender-2.82/2.82/scripts/addons/{ADDON}")
+    addon_blender_path = Path(f"./external/blender-2.90/2.90/scripts/addons/{ADDON}")
     addon_github_path = Path(f"./{ADDON}")
     if addon_github_path.exists():
         shutil.rmtree(addon_github_path)

@@ -55,7 +55,6 @@ def get_suffix(blender_version):
                         nightly = True
 
     if not blender_zippath:
-        print(soup)
         raise Exception(f"Unable to find {blender_version} in nightlies, here is what is available {versions_found}.")
 
     return blender_zippath, nightly
@@ -131,7 +130,7 @@ def move_blender_archive_to_dest(cache_dir, dst, archive):
 
 
 def create_config(archive, blender_version):
-    config_path = os.path.join(archive, blender_version, "config")
+    config_path = os.path.join(archive, split(blender_version, ".")[0:2], "config")
     os.makedirs(config_path)
 
 

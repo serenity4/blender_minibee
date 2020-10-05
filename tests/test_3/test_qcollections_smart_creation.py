@@ -1,6 +1,6 @@
 import pytest
-from quietude.quietude.blender_utils import bcollections
-from quietude.quietude.core import qcollections
+from minibee.minibee.blender_utils import bcollections
+from minibee.minibee.core import qcollections
 
 def test_qcollections_count():
     assert(bcollections.get_children_count('Quietude') == 3)

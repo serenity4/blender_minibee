@@ -1,0 +1,15 @@
+{
+    "folders": [
+        {
+            "path": ".",
+            "name": "Github MiniBee"
+        },
+        {
+            "path": "external/blender-2.90/2.90/scripts/addons/minibee",
+            "name": "In-blender MiniBee"
+        }
+    ],
+    "settings": {
+        "python.pythonPath": "/home/belmant/miniconda3/envs/minibee-blender/bin/python"
+    }
+}

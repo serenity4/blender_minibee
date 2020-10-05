@@ -9,7 +9,7 @@ available_modifiers = [
     ]
 
 class AddQCollectionModifier(bpy.types.Operator):
-    bl_idname = "quietude.add_qcollection_modifier"
+    bl_idname = "minibee.add_qcollection_modifier"
     bl_label = "Add QCollection Modifier"
     bl_description = "Adds a QCollection modifier."
     bl_options = {"REGISTER", "UNDO"}

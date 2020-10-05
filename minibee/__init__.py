@@ -18,6 +18,7 @@
 
 import importlib
 from .log import logger
+from . import utils
 
 logger.debug("\033[34;1;1m========== START ==========\033[m")
 
@@ -35,11 +36,11 @@ if reimport:
     for module in auto_load.modules:
         if 'auto_load' not in module.__name__:
             logger.debug(f"    \033[33;1;1m--> {module.__name__}\033[m")
-            globals()[module.__name__.strip('quietude.')] = importlib.reload(module)
+            globals()[module.__name__.strip('minibee.')] = importlib.reload(module)
 else:
     for module in auto_load.modules:
         if 'auto_load' not in module.__name__:
-            globals()[module.__name__.strip('quietude.')] = importlib.import_module(module.__name__)
+            globals()[module.__name__.strip('minibee.')] = importlib.import_module(module.__name__)
 
 auto_load.init_classes()
 
@@ -57,10 +58,10 @@ bl_info = {
 def register():
     auto_load.register()
     keymaps.register_keymaps()
-    logger.debug("Quietude registered.")
+    logger.debug("Addon registered.")
 
 
 def unregister():
-    logger.debug("Unregistering Quietude.")
+    logger.debug("Unregistering addon.")
     keymaps.unregister_keymaps()
     auto_load.unregister()

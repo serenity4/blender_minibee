@@ -13,7 +13,7 @@ def parse_cli():
     python_flag_names = ["--test", "--install", "--override"]
     python_flags = []
 
-    parser.add_argument('--bversion', type=str, default='2.82', help="Blender version to run.")
+    parser.add_argument('--bversion', type=str, default='2.90', help="Blender version to run.")
     parser.add_argument(python_flag_names[0], type=int, default=0, help="Runs the test corresponding to the provided number and exits. No tests are run for a value of zero (default).")
     parser.add_argument(python_flag_names[1], action='store_true', help="Installs the addon (zips it and imports it from within Blender).")
     parser.add_argument(python_flag_names[2], action='store_true', help='Overrides existing addon, if one has already been installed.')

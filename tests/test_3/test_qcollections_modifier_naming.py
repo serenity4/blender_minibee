@@ -1,6 +1,6 @@
 import pytest
-from quietude.quietude.blender_utils import bmodifiers
-from quietude.quietude.core import qcollections
+from minibee.minibee.blender_utils import bmodifiers
+from minibee.minibee.core import qcollections
 
 @pytest.mark.parametrize("qcollection_number, expected_modifier_name", [
     [1, "Q1_MIRROR_1"],

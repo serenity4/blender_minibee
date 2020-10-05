@@ -6,5 +6,5 @@ class QCollectionPieMenu(bpy.types.Menu):
 
     def draw(self, context):
         pie = self.layout.menu_pie()
-        pie.operator('quietude.display_qcollection_modifier_pie_menu', text="Add QCollection Modifier")
+        pie.operator('minibee.display_qcollection_modifier_pie_menu', text="Add QCollection Modifier")
         

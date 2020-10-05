@@ -1,0 +1,40 @@
+dist: xenial
+os:
+    - linux
+    # - osx
+    # - windows
+
+env:
+    global:
+        - BLENDER_CACHE=$HOME/.cache/blender
+    matrix:
+        - BLENDER_VERSION="2.80"
+        - BLENDER_VERSION="2.81"
+        - BLENDER_VERSION="2.82"
+        - BLENDER_VERSION="2.83"
+
+language: python
+python: "3.7"
+
+cache:
+    directories:
+        - ${BLENDER_CACHE}
+
+before_install:
+    - python -m pip install -r requirements.txt
+    - python scripts/travis/before_install.py
+install:
+    - python --version
+    - python scripts/travis/get_blender.py --bversion=${BLENDER_VERSION}
+
+script:
+    - python tests/run_all_tests.py --bversion=${BLENDER_VERSION} --override
+    # - bash <(curl -s https://codecov.io/bash)
+
+#after_success:
+#    - codecov -f tests_output/coverage.xml
+
+notifications:
+    email:
+        on_success: change
+        on_failure: always

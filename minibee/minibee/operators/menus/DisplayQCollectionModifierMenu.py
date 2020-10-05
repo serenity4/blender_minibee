@@ -1,7 +1,7 @@
 import bpy
 
 class DisplayQCollectionModifierMenu(bpy.types.Operator):
-    bl_idname = "quietude.display_qcollection_modifier_pie_menu"
+    bl_idname = "minibee.display_qcollection_modifier_pie_menu"
     bl_label = "Display QCollection Modifiers"
     bl_description = "Displays the QCollection Modifier menu"
     bl_options = {"REGISTER"}

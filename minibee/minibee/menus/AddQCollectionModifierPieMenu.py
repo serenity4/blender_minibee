@@ -10,5 +10,5 @@ class AddQCollectionModifierPieMenu(bpy.types.Menu):
         pie = layout.menu_pie()
         # operator_enum will just spread all available options
         # for the type enum of the operator on the pie
-        pie.operator_enum(operator="quietude.add_qcollection_modifier", property="modifier_type")
+        pie.operator_enum(operator="minibee.add_qcollection_modifier", property="modifier_type")
         
