@@ -18,7 +18,7 @@
 
 import importlib
 from .log import logger
-from . import utils
+from pathlib import Path
 
 logger.debug("\033[34;1;1m========== START ==========\033[m")
 
@@ -57,6 +57,8 @@ bl_info = {
 
 def register():
     auto_load.register()
+    bpy.types.Scene.mb_prop_minibee = bpy.props.PointerProperty(name="MiniBee", type=bpy.types.Object)
+    bpy.types.Scene.mb_prop_datapath = bpy.props.StringProperty(name="Data path", subtype="FILE_PATH", default=str(Path(str(Path.home()) + "/.julia/dev/MiniBee/mini_bee_data.json")))
     keymaps.register_keymaps()
     logger.debug("Addon registered.")
 

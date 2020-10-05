@@ -10,6 +10,10 @@
         }
     ],
     "settings": {
-        "python.pythonPath": "/home/belmant/miniconda3/envs/minibee-blender/bin/python"
+        "python.pythonPath": "/home/belmant/miniconda3/envs/minibee-blender/bin/python",
+        "python.autoComplete.extraPaths": [
+            "${workspace}/external/blender-2.90/2.90/scripts/modules",
+            "${workspace}/external/blender-2.90/2.90/scripts/addons/minibee",
+        ],
     }
 }

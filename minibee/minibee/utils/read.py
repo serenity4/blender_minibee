@@ -18,3 +18,18 @@ def json(path):
     with open(path, 'r') as ifile:
         res = json_load(ifile)
     return res
+
+def convert_dict_list_to_array(data):
+    """Converts all dictionary values to numpy arrays.
+
+    Args:
+        data (dict): dictionary to convert
+
+    Returns:
+        dict: dictionary with values converted into arrays
+
+    """
+
+    for k, v in data.items():
+        data[k] = np.array(list(v))
+    return data

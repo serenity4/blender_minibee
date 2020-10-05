@@ -4,16 +4,26 @@ addon_keymaps = []
 
 kmi_dictlist = [
     {
-        'idname': "wm.call_menu_pie",
+        # 'idname': "wm.call_menu_pie",
+        # 'type': "M",
+        # 'value': "PRESS",
+        # 'shift': True,
+        # 'ctrl': True,
+        # 'alt': False,
+        # 'oskey': False,
+        # 'properties': {
+        #     'name': 'VIEW3D_MT_QCollectionPieMenu'
+        # },
+        'idname': "minibee.update_animation_data",
         'type': "M",
         'value': "PRESS",
         'shift': True,
         'ctrl': True,
         'alt': False,
         'oskey': False,
-        'properties': {
-            'name': 'VIEW3D_MT_QCollectionPieMenu'
-        }
+        # 'properties': {
+        #     'name': 'VIEW3D_MT_QCollectionPieMenu'
+        # }
     }
 ]
 
