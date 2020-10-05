@@ -1,0 +1,22 @@
+mirror:
+  use_axis: 
+    - "BoolProperty"
+    - "BoolProperty"
+    - "BoolProperty"
+  use_bisect_axis:
+    - "BoolProperty"
+    - "BoolProperty"
+    - "BoolProperty"
+  use_bisect_flip_axis: 
+    - "BoolProperty"
+    - "BoolProperty"
+    - "BoolProperty"
+  mirror_object: "Object"
+  use_mirror_vertex_groups: "BoolProperty"
+  use_clip: "BoolProperty"
+  use_mirror_merge: "BoolProperty"
+  merge_threshold: "FloatProperty"
+  use_mirror_u: "BoolProperty"
+  use_mirror_v: "BoolProperty"
+  offset_u: "FloatProperty"
+  offset_v: "FloatProperty"
