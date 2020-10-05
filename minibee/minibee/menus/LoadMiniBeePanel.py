@@ -16,3 +16,4 @@ class QCollectionEditorPanel(bpy.types.Panel):
         col.prop(context.scene, "mb_prop_minibee")
         col.prop(context.scene, "mb_prop_datapath")
         col.operator("minibee.update_animation_data")
+        col.operator("minibee.restore_object")
